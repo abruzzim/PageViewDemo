@@ -17,16 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%%DataViewController-I-TRACE, -viewDidLoad: called.");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    NSLog(@"%%DataViewController-I-TRACE, -didReceiveMemoryWarning: called.");
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.dataLabel.text = [self.dataObject description];
+    NSLog(@"%%DataViewController-I-TRACE, -viewWillAppear: called.");
+    //self.dataLabel.text = [self.dataObject description];
+    [self.webView loadHTMLString:self.dataObject baseURL:[NSURL URLWithString:@""]];
 }
 
 @end

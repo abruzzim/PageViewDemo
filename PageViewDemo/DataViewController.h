@@ -11,6 +11,7 @@
 @interface DataViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
+@property (weak,   nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) id dataObject;
 
 @end
